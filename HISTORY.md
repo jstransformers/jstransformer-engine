@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.0: 2016-07-13
+
+- Update to `engine@^0.1.11`
+
 ## v0.0.2: 2016-06-06
 
 - Updated Boilerplate

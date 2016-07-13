@@ -1,6 +1,6 @@
 {
   "name": "jstransformer-engine",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Engine support for JSTransformers.",
   "keywords": [
     "jstransformer"
