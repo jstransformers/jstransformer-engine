@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-var Engine = require('engine');
+var engine = require('engine')
 
-exports.name = 'engine';
-exports.outputFormat = 'html';
+exports.name = 'engine'
+exports.outputFormat = 'html'
 
 /**
  * Register all the provided helpers.
@@ -11,26 +11,29 @@ exports.outputFormat = 'html';
 function registerHelpers(engine, helpers) {
   // Add all the helpers.
   for (var name in helpers || {}) {
-    var helper = null;
-    switch (typeof helpers[name]) {
-      case "string":
-        helper = require(helpers[name]);
-        break;
-      case "function":
-      default:
-        helper = helpers[name];
-        break;
-    }
-    if (helper !== null) {
-      engine.helper(name, helper);
+    if ({}.hasOwnProperty.call(helpers, name)) {
+      var helper = null
+      switch (typeof helpers[name]) {
+        case 'string':
+          // eslint-disable-next-line import/no-dynamic-require
+          helper = require(helpers[name])
+          break
+        case 'function':
+        default:
+          helper = helpers[name]
+          break
+      }
+      if (helper !== null) {
+        engine.helper(name, helper)
+      }
     }
   }
 }
 
 exports.compile = function (str, options) {
-  var opts = options || {};
-  var engine = Engine(opts);
-  registerHelpers(engine, opts.helpers);
-  registerHelpers(engine, opts.partials);
-  return engine.compile(str, opts);
-};
+  var opts = options || {}
+  engine = engine(opts)
+  registerHelpers(engine, opts.helpers)
+  registerHelpers(engine, opts.partials)
+  return engine.compile(str, opts)
+}
