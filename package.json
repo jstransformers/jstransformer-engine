@@ -1,6 +1,9 @@
 {
+  "dependencies": {
+    "engine": "^0.1.12"
+  },
   "name": "jstransformer-engine",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Engine support for JSTransformers.",
   "keywords": [
     "jstransformer"
@@ -8,9 +11,6 @@
   "files": [
     "index.js"
   ],
-  "dependencies": {
-    "engine": "^0.1.11"
-  },
   "devDependencies": {
     "upper-case": "^1.1.2",
     "test-jstransformer": "^1.0.0",
