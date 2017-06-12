@@ -1,6 +1,6 @@
 'use strict'
 
-var engine = require('engine')
+const engine = require('engine')
 
 exports.name = 'engine'
 exports.outputFormat = 'html'
@@ -10,9 +10,9 @@ exports.outputFormat = 'html'
  */
 function registerHelpers(engine, helpers) {
   // Add all the helpers.
-  for (var name in helpers || {}) {
+  for (const name in helpers || {}) {
     if ({}.hasOwnProperty.call(helpers, name)) {
-      var helper = null
+      let helper = null
       switch (typeof helpers[name]) {
         case 'string':
           // eslint-disable-next-line import/no-dynamic-require
@@ -31,9 +31,9 @@ function registerHelpers(engine, helpers) {
 }
 
 exports.compile = function (str, options) {
-  var opts = options || {}
-  engine = engine(opts)
-  registerHelpers(engine, opts.helpers)
-  registerHelpers(engine, opts.partials)
-  return engine.compile(str, opts)
+  const opts = options || {}
+  const eng = engine(opts)
+  registerHelpers(eng, opts.helpers)
+  registerHelpers(eng, opts.partials)
+  return eng.compile(str, opts)
 }
