@@ -15,7 +15,7 @@
 ## API
 
 ```js
-var engine = require('jstransformer')(require('jstransformer-engine'));
+var engine = require('jstransformer')(require('jstransformer-engine'))
 
 engine.render('Hello, <%= name %>!', { name: 'World' }).body
 //=> 'Hello, World!'
