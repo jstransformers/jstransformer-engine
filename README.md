@@ -1,7 +1,5 @@
 # jstransformer-engine
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-engine.svg)](https://greenkeeper.io/)
-
 [engine](https://github.com/jonschlinkert/engine) support for [JSTransformers](http://github.com/jstransformers).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-engine/master.svg)](https://travis-ci.org/jstransformers/jstransformer-engine)
