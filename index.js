@@ -13,14 +13,15 @@ function register(engine, helpers) {
   for (const name in helpers || {}) {
     if ({}.hasOwnProperty.call(helpers, name)) {
       if (typeof helpers[name] === 'string') {
-        // eslint-disable-next-line import/no-dynamic-require
         engine.helper(name, require(helpers[name]))
         continue
       }
+
       if (typeof helpers[name] === 'function') {
         engine.helper(name, helpers[name])
         continue
       }
+
       throw new Error('Invalid helpers type')
     }
   }
