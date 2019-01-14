@@ -29,7 +29,7 @@ function register(engine, helpers) {
 exports.compile = function (str, options) {
   const opts = Object.assign({}, options)
   const eng = new Engine(opts)
-
   register(eng, opts.helpers)
+
   return eng.compile(str, opts)
 }
