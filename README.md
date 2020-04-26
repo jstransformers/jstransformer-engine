@@ -5,7 +5,6 @@
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-engine/master.svg)](https://travis-ci.org/jstransformers/jstransformer-engine)
 [![Coverage Status](https://img.shields.io/codecov/c/github/jstransformers/jstransformer-engine/master.svg)](https://codecov.io/gh/jstransformers/jstransformer-engine)
 [![Dependency Status](https://img.shields.io/david/jstransformers/jstransformer-engine/master.svg)](http://david-dm.org/jstransformers/jstransformer-engine)
-
 [![NPM version](https://img.shields.io/npm/v/jstransformer-engine.svg)](https://www.npmjs.org/package/jstransformer-engine)
 
 ## Installation
